@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { Image } from 'expo-image';
+import { View, Text, StyleSheet } from 'react-native';
 
 export default function ProfileScreen() {
     return (
@@ -13,6 +14,10 @@ export default function ProfileScreen() {
             <Text style={styles.bio}>
                 Software Developer at Hold On Software Tech 🚀
             </Text>
+            <Image
+                source={require('../../assets/images/splash.gif')}
+                contentFit="contain"
+            />
         </View>
     );
 }
