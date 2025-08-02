@@ -5,7 +5,10 @@ node_modules/
 /node_modules
 
 .env
-
+/.env
+/env
+/server/.env
+/server/env
 # Expo
 .expo/
 dist/
