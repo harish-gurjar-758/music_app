@@ -5,8 +5,8 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 // Import your screens
 import HomeScreen from '@/app/(tabs)';
-import UploadScreen from '@/app/(tabs)'; 
-import ProfileScreen from '@/app/(tabs)'; 
+import UploadScreen from '@/app/(tabs)';
+import ProfileScreen from '@/app/(tabs)';
 
 const Tab = createBottomTabNavigator();
 
@@ -20,8 +20,7 @@ export default function AppNavigator() {
                     tabBarActiveTintColor: '#6200EE',
                     tabBarInactiveTintColor: 'gray',
                     tabBarIcon: ({ focused, color, size }) => {
-                        let iconName = '';
-
+                        let iconName = '
                         if (route.name === 'Home') {
                             iconName = focused ? 'musical-notes' : 'musical-notes-outline';
                         } else if (route.name === 'Upload') {
