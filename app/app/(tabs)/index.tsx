@@ -4,9 +4,12 @@ import { View, Text, StyleSheet } from 'react-native';
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
-      <Text>
-        home
-      </Text>
+      <Text>home</Text>
+      <Image
+        source={require('../../assets/images/app-icon.jpg')}
+        style={styles.icon}
+        contentFit="contain"
+      />
     </View>
   );
 }
@@ -19,20 +22,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: '#fff',
   },
-  titleContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-  },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
-  },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
+  icon: {
+    width: 100,
+    height: 100,
+    marginTop: 16,
   },
 });
