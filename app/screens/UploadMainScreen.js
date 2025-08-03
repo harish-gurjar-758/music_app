@@ -42,7 +42,6 @@ export default function UploadMainScreen() {
     formData.append('title', title);
     formData.append('music', {
       uri: musicFile.uri,
-      name: musicFile.name,
       type: musicFile.mimeType || 'audio/mpeg', // fallback if undefined
     });
 

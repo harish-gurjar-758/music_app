@@ -6,7 +6,7 @@ export default function UploadScreen() {
   return (
     <View style={styles.container}>
       <UploadMainScreen />
-    </View>
+    </View> 
   );
 }
 
