@@ -1,14 +1,14 @@
 import Music from '../models/Music.js';
 
 // Upload Music
-export const uploadMusic = async(req, res)=>{
+export const uploadMusic = async (req, res) => {
     try {
-        const {title}=req.body;
+        const { title } = req.body;
 
-        if(!title){
+        if (!title) {
             return res.status(400).json({
-                success:false,
-                message:'Title are required'
+                success: false,
+                message: 'Title are required'
             });
         };
 
@@ -21,13 +21,30 @@ export const uploadMusic = async(req, res)=>{
         await musics.save();
 
         res.status(201).json({
-            success:true,
-            data:musics
+            success: true,
+            data: musics
         });
     } catch (error) {
         res.status(400).json({
-            success:false,
-            error:error.message
+            success: false,
+            error: error.message
+        });
+    }
+};
+
+// Get all musics 
+
+export const getAllMusic = async (req, res) => {
+    try {
+        const musics = await Music.find();
+        res.status(200).json({
+            success: true,
+            data: musics
+        });
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            error: error.message
         });
     }
 };
