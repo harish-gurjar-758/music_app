@@ -1,8 +1,14 @@
 import mongoose from "mongoose";
 
 const musicSchema = new mongoose.Schema({
-    title: String,
-    music: String
+    title: {
+        type: String,
+        require: true,
+    },
+    music: {
+        type: String,
+        require: true,
+    }
 });
 
 export default mongoose.model('Songs', musicSchema);
