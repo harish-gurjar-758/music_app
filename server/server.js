@@ -3,6 +3,9 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 // import cookieParser from 'cookie-parser';
 
+// Custom modules
+import db from './src/config/db.js'
+import musicRoutes from './src/routes/musicRoutes.js'
 
 // Load environment variables
 dotenv.config();
@@ -24,7 +27,7 @@ db();
 
 
 // API Routes
-
+app.use('/api/music', musicRoutes);
 
 // Server Listen
 app.listen(PORT, () => {
