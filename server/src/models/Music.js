@@ -1,8 +1,8 @@
 import mongoose from "mongoose";
 
-const songsSchema = new mongoose.Schema({
+const musicSchema = new mongoose.Schema({
     title: String,
-    song: String
+    music: String
 });
 
-export default mongoose.model('Songs', songsSchema);
+export default mongoose.model('Songs', musicSchema);
